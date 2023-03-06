@@ -50,7 +50,7 @@ namespace Electrodevices.View
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(344, 30);
+            this.label1.Location = new System.Drawing.Point(487, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(537, 20);
             this.label1.TabIndex = 0;
@@ -130,7 +130,7 @@ namespace Electrodevices.View
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameLabel.Location = new System.Drawing.Point(269, 30);
+            this.nameLabel.Location = new System.Drawing.Point(412, 32);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(57, 20);
             this.nameLabel.TabIndex = 11;

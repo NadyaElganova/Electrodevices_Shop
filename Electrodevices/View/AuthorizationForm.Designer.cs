@@ -36,6 +36,8 @@ namespace Electrodevices.View
             this.label2 = new System.Windows.Forms.Label();
             this.registration_LinkLabel = new System.Windows.Forms.LinkLabel();
             this.administrator_CheckBox = new System.Windows.Forms.CheckBox();
+            this.load_pictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.load_pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // login_TextBox
@@ -101,11 +103,21 @@ namespace Electrodevices.View
             this.administrator_CheckBox.Text = "Войти как администратор";
             this.administrator_CheckBox.UseVisualStyleBackColor = true;
             // 
+            // load_pictureBox
+            // 
+            this.load_pictureBox.Location = new System.Drawing.Point(272, 12);
+            this.load_pictureBox.Name = "load_pictureBox";
+            this.load_pictureBox.Size = new System.Drawing.Size(165, 98);
+            this.load_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.load_pictureBox.TabIndex = 7;
+            this.load_pictureBox.TabStop = false;
+            // 
             // AuthorizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 418);
+            this.Controls.Add(this.load_pictureBox);
             this.Controls.Add(this.administrator_CheckBox);
             this.Controls.Add(this.registration_LinkLabel);
             this.Controls.Add(this.label2);
@@ -116,6 +128,7 @@ namespace Electrodevices.View
             this.Name = "AuthorizationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AuthorizationForm";
+            ((System.ComponentModel.ISupportInitialize)(this.load_pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,5 +143,6 @@ namespace Electrodevices.View
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel registration_LinkLabel;
         private System.Windows.Forms.CheckBox administrator_CheckBox;
+        private System.Windows.Forms.PictureBox load_pictureBox;
     }
 }

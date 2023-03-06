@@ -45,13 +45,13 @@ namespace Electrodevices.Controller.Authorization
             }
             if (admin.Password == await _encrypt.HashPassword(password, admin.Salt))
             {
-                MessageBox.Show("Success");
+                return admin;
             }
             else
             {
                 MessageBox.Show("Неверный пароль!");
-            }
-            return admin;
+                return null;
+            }            
         }
     }
 }

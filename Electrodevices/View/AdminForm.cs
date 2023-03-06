@@ -52,6 +52,7 @@ namespace Electrodevices.View
             Electrodevice electrodevice = allProduct_ListBox.SelectedItem as Electrodevice;
             if (electrodevice == null) return;
             var res = await _data.RemoveElectodevice(electrodevice);
+            if (res == false) MessageBox.Show("Неудалось удалить!");
             UpdateListBox();
         }
 

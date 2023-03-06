@@ -72,16 +72,18 @@ namespace Electrodevices.View
             "по стране производства",
             "по весу",
             "по стоимости"});
-            this.sortProducts_ComboBox.Location = new System.Drawing.Point(152, 13);
+            this.sortProducts_ComboBox.Location = new System.Drawing.Point(114, 11);
+            this.sortProducts_ComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.sortProducts_ComboBox.Name = "sortProducts_ComboBox";
-            this.sortProducts_ComboBox.Size = new System.Drawing.Size(355, 24);
+            this.sortProducts_ComboBox.Size = new System.Drawing.Size(267, 21);
             this.sortProducts_ComboBox.TabIndex = 1;
             // 
             // searchProduct_Button
             // 
-            this.searchProduct_Button.Location = new System.Drawing.Point(513, 63);
+            this.searchProduct_Button.Location = new System.Drawing.Point(385, 51);
+            this.searchProduct_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchProduct_Button.Name = "searchProduct_Button";
-            this.searchProduct_Button.Size = new System.Drawing.Size(161, 26);
+            this.searchProduct_Button.Size = new System.Drawing.Size(121, 21);
             this.searchProduct_Button.TabIndex = 4;
             this.searchProduct_Button.Text = "Найти";
             this.searchProduct_Button.UseVisualStyleBackColor = true;
@@ -89,9 +91,10 @@ namespace Electrodevices.View
             // 
             // sortProduct_Button
             // 
-            this.sortProduct_Button.Location = new System.Drawing.Point(513, 13);
+            this.sortProduct_Button.Location = new System.Drawing.Point(385, 11);
+            this.sortProduct_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.sortProduct_Button.Name = "sortProduct_Button";
-            this.sortProduct_Button.Size = new System.Drawing.Size(161, 26);
+            this.sortProduct_Button.Size = new System.Drawing.Size(121, 21);
             this.sortProduct_Button.TabIndex = 5;
             this.sortProduct_Button.Text = "Сортировать";
             this.sortProduct_Button.UseVisualStyleBackColor = true;
@@ -108,29 +111,30 @@ namespace Electrodevices.View
             "Найти ЭП заданной категории",
             "Найти ЭП, чей вес находится в заданных пределах изаданного производителя",
             "Найти ЭП чья стоимость меньше заданной и от заданного производителя",
-            "Найти наибольшее кол-во бракованных ЭП, поступивших из заданной страны",
-            "Найти ЭП, чья стоимость выше, чем средняя стоимость ЭП заданного производителя"});
-            this.linq_comboBox.Location = new System.Drawing.Point(185, 21);
+            "Найти наибольшее кол-во бракованных ЭП, поступивших из заданной страны"});
+            this.linq_comboBox.Location = new System.Drawing.Point(139, 17);
+            this.linq_comboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.linq_comboBox.Name = "linq_comboBox";
-            this.linq_comboBox.Size = new System.Drawing.Size(583, 24);
+            this.linq_comboBox.Size = new System.Drawing.Size(438, 21);
             this.linq_comboBox.TabIndex = 6;
             this.linq_comboBox.SelectedIndexChanged += new System.EventHandler(this.linq_comboBox_SelectedIndexChanged);
             // 
             // allProduct_ListBox
             // 
             this.allProduct_ListBox.FormattingEnabled = true;
-            this.allProduct_ListBox.ItemHeight = 16;
-            this.allProduct_ListBox.Location = new System.Drawing.Point(12, 286);
+            this.allProduct_ListBox.Location = new System.Drawing.Point(9, 232);
+            this.allProduct_ListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.allProduct_ListBox.Name = "allProduct_ListBox";
-            this.allProduct_ListBox.Size = new System.Drawing.Size(1149, 356);
+            this.allProduct_ListBox.Size = new System.Drawing.Size(863, 290);
             this.allProduct_ListBox.TabIndex = 8;
             this.allProduct_ListBox.SelectedIndexChanged += new System.EventHandler(this.allProduct_ListBox_SelectedIndexChanged);
             // 
             // pictureProduct_PictureBox
             // 
-            this.pictureProduct_PictureBox.Location = new System.Drawing.Point(12, 12);
+            this.pictureProduct_PictureBox.Location = new System.Drawing.Point(9, 10);
+            this.pictureProduct_PictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureProduct_PictureBox.Name = "pictureProduct_PictureBox";
-            this.pictureProduct_PictureBox.Size = new System.Drawing.Size(222, 263);
+            this.pictureProduct_PictureBox.Size = new System.Drawing.Size(166, 214);
             this.pictureProduct_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureProduct_PictureBox.TabIndex = 9;
             this.pictureProduct_PictureBox.TabStop = false;
@@ -142,34 +146,38 @@ namespace Electrodevices.View
             "самый дорогой",
             "самый дешевый",
             "самый популярный"});
-            this.betterProduct_comboBox.Location = new System.Drawing.Point(152, 63);
+            this.betterProduct_comboBox.Location = new System.Drawing.Point(114, 51);
+            this.betterProduct_comboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.betterProduct_comboBox.Name = "betterProduct_comboBox";
-            this.betterProduct_comboBox.Size = new System.Drawing.Size(355, 24);
+            this.betterProduct_comboBox.Size = new System.Drawing.Size(267, 21);
             this.betterProduct_comboBox.TabIndex = 10;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 18);
+            this.label3.Location = new System.Drawing.Point(43, 15);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 17);
+            this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "Сортировать";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 68);
+            this.label4.Location = new System.Drawing.Point(24, 55);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 17);
+            this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Электроприбор";
             // 
             // searchLinqButton
             // 
-            this.searchLinqButton.Location = new System.Drawing.Point(743, 81);
+            this.searchLinqButton.Location = new System.Drawing.Point(557, 66);
+            this.searchLinqButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchLinqButton.Name = "searchLinqButton";
-            this.searchLinqButton.Size = new System.Drawing.Size(165, 67);
+            this.searchLinqButton.Size = new System.Drawing.Size(124, 54);
             this.searchLinqButton.TabIndex = 13;
             this.searchLinqButton.Text = "Найти";
             this.searchLinqButton.UseVisualStyleBackColor = true;
@@ -178,9 +186,10 @@ namespace Electrodevices.View
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 24);
+            this.label1.Location = new System.Drawing.Point(4, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 17);
+            this.label1.Size = new System.Drawing.Size(115, 13);
             this.label1.TabIndex = 14;
             this.label1.Text = "Запросы для поиска:";
             // 
@@ -202,24 +211,28 @@ namespace Electrodevices.View
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.searchLinqButton);
             this.groupBox1.Controls.Add(this.linq_comboBox);
-            this.groupBox1.Location = new System.Drawing.Point(247, 116);
+            this.groupBox1.Location = new System.Drawing.Point(185, 94);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(914, 159);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(686, 129);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(161, 117);
+            this.label10.Location = new System.Drawing.Point(121, 95);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(32, 17);
+            this.label10.Size = new System.Drawing.Size(25, 13);
             this.label10.TabIndex = 27;
             this.label10.Text = "Год";
             // 
             // yearNumericUpDown
             // 
-            this.yearNumericUpDown.Location = new System.Drawing.Point(199, 117);
+            this.yearNumericUpDown.Location = new System.Drawing.Point(149, 95);
+            this.yearNumericUpDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.yearNumericUpDown.Maximum = new decimal(new int[] {
             2070,
             0,
@@ -231,7 +244,7 @@ namespace Electrodevices.View
             0,
             0});
             this.yearNumericUpDown.Name = "yearNumericUpDown";
-            this.yearNumericUpDown.Size = new System.Drawing.Size(129, 22);
+            this.yearNumericUpDown.Size = new System.Drawing.Size(97, 20);
             this.yearNumericUpDown.TabIndex = 26;
             this.yearNumericUpDown.Value = new decimal(new int[] {
             2020,
@@ -242,102 +255,113 @@ namespace Electrodevices.View
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(257, 86);
+            this.label9.Location = new System.Drawing.Point(193, 70);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 17);
+            this.label9.Size = new System.Drawing.Size(63, 13);
             this.label9.TabIndex = 25;
             this.label9.Text = "Цена / Вес";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(350, 117);
+            this.label8.Location = new System.Drawing.Point(262, 95);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 17);
+            this.label8.Size = new System.Drawing.Size(60, 13);
             this.label8.TabIndex = 24;
             this.label8.Text = "Категория";
             // 
             // categoryComboBox
             // 
             this.categoryComboBox.FormattingEnabled = true;
-            this.categoryComboBox.Location = new System.Drawing.Point(433, 114);
+            this.categoryComboBox.Location = new System.Drawing.Point(325, 93);
+            this.categoryComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.categoryComboBox.Name = "categoryComboBox";
-            this.categoryComboBox.Size = new System.Drawing.Size(233, 24);
+            this.categoryComboBox.Size = new System.Drawing.Size(176, 21);
             this.categoryComboBox.TabIndex = 23;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(121, 56);
+            this.label7.Location = new System.Drawing.Point(91, 46);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 17);
+            this.label7.Size = new System.Drawing.Size(46, 13);
             this.label7.TabIndex = 22;
             this.label7.Text = "Модель";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(430, 54);
+            this.label6.Location = new System.Drawing.Point(322, 44);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(151, 17);
+            this.label6.Size = new System.Drawing.Size(117, 13);
             this.label6.TabIndex = 21;
             this.label6.Text = "Страна производства";
             // 
             // countryComboBox
             // 
             this.countryComboBox.FormattingEnabled = true;
-            this.countryComboBox.Location = new System.Drawing.Point(596, 51);
+            this.countryComboBox.Location = new System.Drawing.Point(447, 41);
+            this.countryComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.countryComboBox.Name = "countryComboBox";
-            this.countryComboBox.Size = new System.Drawing.Size(233, 24);
+            this.countryComboBox.Size = new System.Drawing.Size(176, 21);
             this.countryComboBox.TabIndex = 20;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(495, 86);
+            this.label5.Location = new System.Drawing.Point(371, 70);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 17);
+            this.label5.Size = new System.Drawing.Size(19, 13);
             this.label5.TabIndex = 19;
             this.label5.Text = "по";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(334, 86);
+            this.label2.Location = new System.Drawing.Point(250, 70);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(15, 17);
+            this.label2.Size = new System.Drawing.Size(13, 13);
             this.label2.TabIndex = 18;
             this.label2.Text = "с";
             // 
             // priceToNumericUpDown
             // 
-            this.priceToNumericUpDown.Location = new System.Drawing.Point(525, 81);
+            this.priceToNumericUpDown.Location = new System.Drawing.Point(394, 66);
+            this.priceToNumericUpDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.priceToNumericUpDown.Maximum = new decimal(new int[] {
             700000,
             0,
             0,
             0});
             this.priceToNumericUpDown.Name = "priceToNumericUpDown";
-            this.priceToNumericUpDown.Size = new System.Drawing.Size(129, 22);
+            this.priceToNumericUpDown.Size = new System.Drawing.Size(97, 20);
             this.priceToNumericUpDown.TabIndex = 17;
             // 
             // priceFromNumericUpDown
             // 
-            this.priceFromNumericUpDown.Location = new System.Drawing.Point(355, 81);
+            this.priceFromNumericUpDown.Location = new System.Drawing.Point(266, 66);
+            this.priceFromNumericUpDown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.priceFromNumericUpDown.Maximum = new decimal(new int[] {
             700000,
             0,
             0,
             0});
             this.priceFromNumericUpDown.Name = "priceFromNumericUpDown";
-            this.priceFromNumericUpDown.Size = new System.Drawing.Size(134, 22);
+            this.priceFromNumericUpDown.Size = new System.Drawing.Size(100, 20);
             this.priceFromNumericUpDown.TabIndex = 16;
             // 
             // modelTextBox
             // 
-            this.modelTextBox.Location = new System.Drawing.Point(185, 51);
+            this.modelTextBox.Location = new System.Drawing.Point(139, 41);
+            this.modelTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.modelTextBox.Name = "modelTextBox";
-            this.modelTextBox.Size = new System.Drawing.Size(227, 22);
+            this.modelTextBox.Size = new System.Drawing.Size(171, 20);
             this.modelTextBox.TabIndex = 15;
             // 
             // groupBox2
@@ -348,21 +372,24 @@ namespace Electrodevices.View
             this.groupBox2.Controls.Add(this.searchProduct_Button);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.sortProduct_Button);
-            this.groupBox2.Location = new System.Drawing.Point(303, 1);
+            this.groupBox2.Location = new System.Drawing.Point(227, 1);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(773, 109);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(580, 89);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             // 
             // SearchProductForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 654);
+            this.ClientSize = new System.Drawing.Size(884, 531);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureProduct_PictureBox);
             this.Controls.Add(this.allProduct_ListBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SearchProductForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchProductForm";

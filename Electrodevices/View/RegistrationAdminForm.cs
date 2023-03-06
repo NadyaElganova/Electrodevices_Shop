@@ -26,6 +26,7 @@ namespace Electrodevices.View
                 MessageBox.Show("Некорректный ввод!");
                 return;
             }
+            registration_Button.Enabled = false;
             var res = await AuthAdmin.Instance.AddObject(new Administrator() { Login = login_TextBox.Text, Password = password_TextBox.Text });
             if (res == true)
             {
@@ -37,6 +38,7 @@ namespace Electrodevices.View
             }
             login_TextBox.Text = "";
             password_TextBox.Text = "";
+            registration_Button.Enabled = true;
             return;
         }
 

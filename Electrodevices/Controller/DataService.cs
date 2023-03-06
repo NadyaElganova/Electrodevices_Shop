@@ -45,6 +45,8 @@ namespace Electrodevices.Controller
         public async Task<bool> RemoveElectodevice(Electrodevice electrodevice)
         {
             var deleteProduct = await _context.Electrodevices.FirstOrDefaultAsync(e => e.Id == electrodevice.Id);
+            var basket = await _context.Baskets.FirstOrDefaultAsync(e => e.Electrodevice.Id == electrodevice.Id);
+            if(basket != null) _context.Baskets.Remove(basket);
             _context.Electrodevices.Remove(deleteProduct); 
             var res = await _context.SaveChangesAsync();
             if (res == 0)
@@ -154,7 +156,7 @@ namespace Electrodevices.Controller
             var res = await _context.Electrodevices.Include("Country").Include("Date").Include("Category").FirstOrDefaultAsync(el => el.Id == electrodevice.Id);
             res.Amount_Sale++;
             res.Amount_Stock--;
-            int result= await _context.SaveChangesAsync();
+            int result = await _context.SaveChangesAsync();
             if (result == 0)
             {
                 return false;

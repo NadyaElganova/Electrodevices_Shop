@@ -16,8 +16,8 @@ namespace Electrodevices.View
     {
         public AuthorizationForm()
         {
-            InitializeComponent();         
-            
+            InitializeComponent();
+
         }
 
         private async void enter_Button_Click(object sender, EventArgs e)
@@ -28,6 +28,8 @@ namespace Electrodevices.View
                 MessageBox.Show("Некорректный ввод!");
                 return;
             }
+            enter_Button.Enabled = false;
+            load_pictureBox.Image = Image.FromFile("D:\\Electrodevices\\Electrodevices\\bin\\ProductPicture\\Загрузка.gif");
             if (administrator_CheckBox.Checked == false)
             {
                 var resultUser = (User)await AuthUser.Instance.LoginObject(login_TextBox.Text, password_TextBox.Text);
@@ -35,6 +37,8 @@ namespace Electrodevices.View
                 {
                     login_TextBox.Text = "";
                     password_TextBox.Text = "";
+                    enter_Button.Enabled = true;
+                    load_pictureBox.Image = null;
                     this.Visible = false;
                     if (new UserForm(resultUser).ShowDialog() == DialogResult.OK)
                     {
@@ -45,6 +49,8 @@ namespace Electrodevices.View
                 {
                     login_TextBox.Text = "";
                     password_TextBox.Text = "";
+                    load_pictureBox.Image = null;
+                    enter_Button.Enabled = true;
                 }
             }
             else
@@ -54,6 +60,8 @@ namespace Electrodevices.View
                 {
                     login_TextBox.Text = "";
                     password_TextBox.Text = "";
+                    enter_Button.Enabled = true;
+                    load_pictureBox.Image = null;
                     this.Visible = false;
                     if (new AdminForm().ShowDialog() == DialogResult.OK)
                     { 
@@ -64,6 +72,8 @@ namespace Electrodevices.View
                 {
                     login_TextBox.Text = "";
                     password_TextBox.Text = "";
+                    load_pictureBox.Image = null;
+                    enter_Button.Enabled = true;
                 }
             }
         }
@@ -73,8 +83,10 @@ namespace Electrodevices.View
             this.Visible = false;
             if (new RegistrationForm().ShowDialog() == DialogResult.OK)
             { 
+
             }
             this.Visible = true;
         }
+
     }
 }

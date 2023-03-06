@@ -114,14 +114,6 @@ namespace Electrodevices.View
                     categoryComboBox.Enabled = false;
                     yearNumericUpDown.Enabled = false;
                     break;
-                case 8:
-                    modelTextBox.Enabled = false;
-                    countryComboBox.Enabled = true;
-                    priceFromNumericUpDown.Enabled = false;
-                    priceToNumericUpDown.Enabled = false;
-                    categoryComboBox.Enabled = false;
-                    yearNumericUpDown.Enabled = false;
-                    break;
             }
         }
 
@@ -165,9 +157,6 @@ namespace Electrodevices.View
                 case 7:
                     country = countryComboBox.SelectedItem.ToString();
                     electrodevices = _context.Electrodevices.Include("Country").Include("Date").Include("Category").Where(p => p.Country.Name == country).MaxBy(p => p.Amount_Defect).ToList();
-                    break;
-                case 8:
-
                     break;
             }
             UpdatelistBox();

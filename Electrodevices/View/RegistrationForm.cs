@@ -41,23 +41,24 @@ namespace Electrodevices.View
                     Email = email_TextBox.Text,
                     Login = login_TextBox.Text,
                     Password = password_TextBox.Text
-                };
+                };                
+                registration_Button.Enabled = false;
                 var result = await AuthUser.Instance.AddObject(user);
                 if (result == true)
                 {
                     MessageBox.Show("Регистрация успешно пройдена!");
-                    firstName_TextBox.Text = "";
-                    secondName_TextBox.Text = "";
-                    phoneNumber_MaskedTextBox.Text = "";
-                    email_TextBox.Text = "";
-                    login_TextBox.Text = "";
-                    password_TextBox.Text = "";
                 }
                 else
                 {
                     MessageBox.Show("Регистрация не пройдена! Что-то пошло не так!");
-                    return;
                 }
+                firstName_TextBox.Text = "";
+                secondName_TextBox.Text = "";
+                phoneNumber_MaskedTextBox.Text = "";
+                email_TextBox.Text = "";
+                login_TextBox.Text = "";
+                password_TextBox.Text = "";
+                registration_Button.Enabled = true;
             }
         }
 

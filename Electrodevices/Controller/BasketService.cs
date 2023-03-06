@@ -26,7 +26,9 @@ namespace Electrodevices.Controller
         public async Task<bool> AddProductInBasket(User user, Electrodevice electrodevice)
         {
             Basket productInBasket = new Basket();
-            productInBasket.Electrodevice = await _context.Electrodevices.FirstOrDefaultAsync(el => el.Id == electrodevice.Id);
+            productInBasket.Electrodevice = await _context.Electrodevices.Include("Category").Include("Country").Include("Date").FirstOrDefaultAsync(el => el.Id == electrodevice.Id);
+            productInBasket.Electrodevice.Amount_Sale = electrodevice.Amount_Sale;
+            productInBasket.Electrodevice.Amount_Stock = electrodevice.Amount_Stock;
             if (productInBasket.Electrodevice.Amount_Stock == 0)
             {
                 MessageBox.Show("Товара нет на складе!");
@@ -62,11 +64,11 @@ namespace Electrodevices.Controller
         public async Task<bool> BuyElectrodevice(int userId)
         {
             var basket = await _context.Baskets.Include("User").Include("Electrodevice").Where(p => p.User.Id == userId).ToListAsync();
-            List<Electrodevice> electrodevices = new List<Electrodevice>();
             int res = 0;
             foreach (var item in basket)
-            {
-                await DataService.Instance.Amount_Sale_Stock(item.Electrodevice);                
+            {              
+                await DataService.Instance.Amount_Sale_Stock(item.Electrodevice);
+                await _context.SaveChangesAsync();
                 _context.Baskets.Remove(item);
                 res = await _context.SaveChangesAsync();
             }

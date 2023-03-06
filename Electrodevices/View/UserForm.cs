@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
-
+using System.Threading;
 
 namespace Electrodevices.View
 {
@@ -25,7 +25,6 @@ namespace Electrodevices.View
         {
             InitializeComponent();
             this.user = user;
-
         }
 
         private async void UpdateComboBox()
@@ -72,8 +71,7 @@ namespace Electrodevices.View
                 MessageBox.Show("Товар не выбран!");
                 return;
             }
-            var product = allProducts_ListBox.SelectedItem as Electrodevice;
-            var res = await _basket.AddProductInBasket(user, product);
+            var res = await _basket.AddProductInBasket(user, electrodevice);
             if (res == true)
             {
                 UpdateListBoxBasket();
@@ -84,9 +82,14 @@ namespace Electrodevices.View
         private async void buyProduct_Button_Click(object sender, EventArgs e)
         {
             if (basketProducts_ListBox.Items.Count == 0) return;
-            await _basket.BuyElectrodevice(user.Id);
-            UpdateListBoxBasket();
+            var res = await _basket.BuyElectrodevice(user.Id);
+            if (res == true)
+            {
+                MessageBox.Show("Покупка совершена!");                
+            }
+
             UpdateListBoxShop();
+            UpdateListBoxBasket();
         }
 
         private async void categories_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
